@@ -5,6 +5,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/e_license_app/',
   plugins: [
     react(),
     tailwindcss(),
@@ -17,7 +18,7 @@ export default defineConfig({
         theme_color: '#4f46e5',
         background_color: '#ffffff',
         display: 'standalone',
-        start_url: '/',
+        start_url: '/e_license_app/',
         icons: [
           {
             src: '/icon-192.png',
