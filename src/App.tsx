@@ -6,7 +6,7 @@ import Dashboard from './pages/Dashboard'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/e_license_app">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/quiz" element={<Quiz />} />
