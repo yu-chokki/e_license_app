@@ -5,7 +5,20 @@
     <link rel="icon" type="image/svg+xml" href="/e_license_app/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>e_license_app</title>
-    <script type="module" crossorigin src="/e_license_app/assets/index-DKYua5VL.js"></script>
+    <script>
+      // GitHub Pages SPA redirect receiver
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location));
+    </script>
+    <script type="module" crossorigin src="/e_license_app/assets/index-B2h78OIq.js"></script>
     <link rel="stylesheet" crossorigin href="/e_license_app/assets/index-C-NcwPpf.css">
   <link rel="manifest" href="/e_license_app/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/e_license_app/registerSW.js"></script></head>
   <body>
