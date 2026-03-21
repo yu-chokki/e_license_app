@@ -34,6 +34,7 @@ export default function Dashboard() {
   const [sortMode, setSortMode] = useState<SortMode>('default');
   const [expanded, setExpanded] = useState<Set<string>>(new Set(topCategories));
   const [expandedSub, setExpandedSub] = useState<Set<string>>(new Set(allSubKeys));
+  const [unlearnedOpen, setUnlearnedOpen] = useState(false);
 
   const toggleCategory = (cat: string) => {
     setExpanded((prev) => {
@@ -78,8 +79,10 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <header className="bg-white border-b px-4 py-3 flex items-center gap-2">
-        <button onClick={() => navigate('/')} className="text-gray-400 hover:text-gray-600">
-          ←
+        <button onClick={() => navigate('/')} className="text-gray-500 hover:text-gray-800 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+          </svg>
         </button>
         <h1 className="text-lg font-bold flex-1">ダッシュボード</h1>
         <button
@@ -137,17 +140,25 @@ export default function Dashboard() {
 
         {/* 未学習タグセクション */}
         {unlearned.length > 0 && (
-          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4 space-y-2">
-            <div className="text-sm font-semibold text-gray-600">
-              未学習タグ ({unlearned.length})
-            </div>
-            <div className="flex flex-wrap gap-1.5">
-              {unlearned.map((tag) => (
-                <span key={tag.id} className="text-xs bg-white border border-gray-200 text-gray-500 px-2 py-1 rounded-full">
-                  {tag.label}
-                </span>
-              ))}
-            </div>
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden">
+            <button
+              onClick={() => setUnlearnedOpen((v) => !v)}
+              className="w-full flex items-center justify-between px-4 py-3 text-left hover:bg-gray-100"
+            >
+              <span className="text-sm font-semibold text-gray-600">
+                未学習タグ ({unlearned.length})
+              </span>
+              <span className="text-gray-400 text-xs">{unlearnedOpen ? '▲' : '▼'}</span>
+            </button>
+            {unlearnedOpen && (
+              <div className="px-4 pb-4 flex flex-wrap gap-1.5">
+                {unlearned.map((tag) => (
+                  <span key={tag.id} className="text-xs bg-white border border-gray-200 text-gray-500 px-2 py-1 rounded-full">
+                    {tag.label}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
         )}
 
