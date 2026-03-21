@@ -1,0 +1,1295 @@
+{
+  "version": "2026-v1.0",
+  "tags": [
+    {
+      "id": "tag_lin_matrix",
+      "label": "行列・テンソルの積、勾配",
+      "eligible": false,
+      "ancestors": [
+        "数学的基礎",
+        "線形代数",
+        "行列演算"
+      ],
+      "keywords": [
+        "行列のランク",
+        "テンソル",
+        "アダマール積"
+      ]
+    },
+    {
+      "id": "tag_lin_eigen",
+      "label": "固有値分解・特異値分解",
+      "eligible": false,
+      "ancestors": [
+        "数学的基礎",
+        "線形代数",
+        "固有値分解・特異値分解"
+      ],
+      "keywords": [
+        "固有値",
+        "固有ベクトル",
+        "対角化",
+        "特異値",
+        "特異ベクトル"
+      ]
+    },
+    {
+      "id": "tag_prob_basic",
+      "label": "確率の基礎",
+      "eligible": false,
+      "ancestors": [
+        "数学的基礎",
+        "確率・統計",
+        "一般的な確率分布"
+      ],
+      "keywords": [
+        "確率変数",
+        "同時確率",
+        "条件付き確率",
+        "周辺確率",
+        "確率質量関数",
+        "確率密度関数",
+        "期待値",
+        "分散",
+        "共分散"
+      ]
+    },
+    {
+      "id": "tag_prob_bernoulli",
+      "label": "ベルヌーイ分布・多項分布",
+      "eligible": false,
+      "ancestors": [
+        "数学的基礎",
+        "確率・統計",
+        "一般的な確率分布"
+      ],
+      "keywords": [
+        "ベルヌーイ試行",
+        "二項分布",
+        "カテゴリカル分布"
+      ]
+    },
+    {
+      "id": "tag_prob_gauss",
+      "label": "ガウス分布・t分布",
+      "eligible": false,
+      "ancestors": [
+        "数学的基礎",
+        "確率・統計",
+        "一般的な確率分布"
+      ],
+      "keywords": [
+        "混合ガウス分布",
+        "中心極限定理"
+      ]
+    },
+    {
+      "id": "tag_prob_estimation",
+      "label": "確率モデルにおけるパラメータ推定",
+      "eligible": true,
+      "ancestors": [
+        "数学的基礎",
+        "確率・統計",
+        "確率モデルにおけるパラメータ推定"
+      ],
+      "keywords": [
+        "ベイズ則",
+        "ナイーブベイズ",
+        "平均二乗誤差",
+        "対数尤度",
+        "ダイバージェンス",
+        "最尤推定",
+        "MAP推定",
+        "ベイズ推定"
+      ]
+    },
+    {
+      "id": "tag_info_theory",
+      "label": "情報理論",
+      "eligible": true,
+      "ancestors": [
+        "数学的基礎",
+        "情報理論",
+        "情報理論"
+      ],
+      "keywords": [
+        "自己情報量",
+        "相互情報量",
+        "エントロピー",
+        "条件付きエントロピー",
+        "結合エントロピー",
+        "クロスエントロピー",
+        "KLダイバージェンス",
+        "JSダイバージェンス"
+      ]
+    },
+    {
+      "id": "tag_ml_knn",
+      "label": "k近傍法・近傍法",
+      "eligible": true,
+      "ancestors": [
+        "機械学習",
+        "機械学習の基礎",
+        "パターン認識"
+      ],
+      "keywords": [
+        "kd-tree",
+        "近似最近傍"
+      ]
+    },
+    {
+      "id": "tag_ml_distance",
+      "label": "距離計算",
+      "eligible": true,
+      "ancestors": [
+        "機械学習",
+        "機械学習の基礎",
+        "パターン認識"
+      ],
+      "keywords": [
+        "コサイン距離",
+        "ユークリッド距離",
+        "マンハッタン距離",
+        "Lp距離",
+        "マハラノビス距離"
+      ]
+    },
+    {
+      "id": "tag_ml_classification",
+      "label": "機械学習の分類",
+      "eligible": true,
+      "ancestors": [
+        "機械学習",
+        "機械学習の基礎",
+        "機械学習の分類"
+      ],
+      "keywords": [
+        "機械学習",
+        "教師あり学習",
+        "教師なし学習",
+        "半教師あり学習"
+      ]
+    },
+    {
+      "id": "tag_ml_linear_reg",
+      "label": "Lasso回帰・Ridge回帰",
+      "eligible": false,
+      "ancestors": [
+        "機械学習",
+        "機械学習の基礎",
+        "教師あり学習① 線形回帰"
+      ],
+      "keywords": [
+        "ノルム",
+        "過少適合",
+        "過剰適合",
+        "最小二乗法",
+        "相関係数",
+        "多重共線性",
+        "L1正則化",
+        "L2正則化"
+      ]
+    },
+    {
+      "id": "tag_ml_logistic",
+      "label": "ロジスティック回帰",
+      "eligible": false,
+      "ancestors": [
+        "機械学習",
+        "機械学習の基礎",
+        "教師あり学習② ロジスティック回帰"
+      ],
+      "keywords": [
+        "ロジット",
+        "シグモイド関数",
+        "ロジスティック関数",
+        "ソフトマックス関数",
+        "オッズ／オッズ比"
+      ]
+    },
+    {
+      "id": "tag_ml_svm",
+      "label": "サポートベクターマシン",
+      "eligible": false,
+      "ancestors": [
+        "機械学習",
+        "機械学習の基礎",
+        "教師あり学習③ サポートベクターマシン"
+      ],
+      "keywords": [
+        "サポートベクター",
+        "マージン最大化",
+        "ハードマージン・ソフトマージン",
+        "カーネル法"
+      ]
+    },
+    {
+      "id": "tag_ml_tree",
+      "label": "Random Forest・勾配ブースティング",
+      "eligible": false,
+      "ancestors": [
+        "機械学習",
+        "機械学習の基礎",
+        "教師あり学習④ 決定木"
+      ],
+      "keywords": [
+        "分類木・回帰木",
+        "CART",
+        "Gini係数",
+        "アンサンブル",
+        "バギング",
+        "ブースティング"
+      ]
+    },
+    {
+      "id": "tag_ml_pca",
+      "label": "主成分分析",
+      "eligible": false,
+      "ancestors": [
+        "機械学習",
+        "機械学習の基礎",
+        "教師なし学習① 次元圧縮"
+      ],
+      "keywords": [
+        "主成分分析",
+        "寄与率",
+        "SNE",
+        "Crowding Problem",
+        "t-SNE"
+      ]
+    },
+    {
+      "id": "tag_ml_clustering",
+      "label": "k-means・階層的クラスタリング",
+      "eligible": false,
+      "ancestors": [
+        "機械学習",
+        "機械学習の基礎",
+        "教師なし学習② クラスタリング"
+      ],
+      "keywords": [
+        "k-means",
+        "階層的クラスタリング",
+        "デンドログラム",
+        "ウォード法",
+        "群平均法"
+      ]
+    },
+    {
+      "id": "tag_ml_overfitting",
+      "label": "過剰適合・過少適合",
+      "eligible": true,
+      "ancestors": [
+        "機械学習",
+        "機械学習の基礎",
+        "機械学習の課題"
+      ],
+      "keywords": [
+        "汎化誤差",
+        "訓練誤差",
+        "バイアス",
+        "バリアンス",
+        "正則化",
+        "次元の呪い"
+      ]
+    },
+    {
+      "id": "tag_ml_validation",
+      "label": "訓練データ・検証データ・テストデータ",
+      "eligible": true,
+      "ancestors": [
+        "機械学習",
+        "機械学習の基礎",
+        "検証集合"
+      ],
+      "keywords": [
+        "訓練誤差",
+        "汎化誤差"
+      ]
+    },
+    {
+      "id": "tag_ml_crossval",
+      "label": "交差検証",
+      "eligible": true,
+      "ancestors": [
+        "機械学習",
+        "機械学習の基礎",
+        "検証集合"
+      ],
+      "keywords": [
+        "ホールドアウト法",
+        "k-分割交差検証法"
+      ]
+    },
+    {
+      "id": "tag_ml_metrics",
+      "label": "性能指標",
+      "eligible": true,
+      "ancestors": [
+        "機械学習",
+        "機械学習の基礎",
+        "性能指標"
+      ],
+      "keywords": [
+        "正解率（Accuracy）",
+        "適合率（Precision）",
+        "再現率（Recall）",
+        "F値",
+        "ROC曲線",
+        "AUC",
+        "IoU",
+        "mAP",
+        "RMSE／MSE",
+        "MAE",
+        "混同行列",
+        "パープレキシティ"
+      ]
+    },
+    {
+      "id": "tag_dl_mlp",
+      "label": "多層パーセプトロン",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "順伝播型ネットワーク",
+        "多層パーセプトロン"
+      ],
+      "keywords": [
+        "全結合層",
+        "重み",
+        "バイアス"
+      ]
+    },
+    {
+      "id": "tag_dl_loss_reg",
+      "label": "損失関数（回帰）",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "順伝播型ネットワーク",
+        "出力層と損失関数"
+      ],
+      "keywords": [
+        "平均二乗誤差（MSE）",
+        "平均絶対誤差（MAE）"
+      ]
+    },
+    {
+      "id": "tag_dl_loss_bin",
+      "label": "損失関数（2値分類）",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "順伝播型ネットワーク",
+        "出力層と損失関数"
+      ],
+      "keywords": [
+        "バイナリクロスエントロピー"
+      ]
+    },
+    {
+      "id": "tag_dl_loss_multi",
+      "label": "損失関数（多クラス分類）",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "順伝播型ネットワーク",
+        "出力層と損失関数"
+      ],
+      "keywords": [
+        "クロスエントロピー誤差",
+        "ソフトマックス関数",
+        "one-hotベクトル"
+      ]
+    },
+    {
+      "id": "tag_dl_loss_multilabel",
+      "label": "損失関数（マルチラベル・順序回帰）",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "順伝播型ネットワーク",
+        "出力層と損失関数"
+      ],
+      "keywords": [
+        "マルチラベル分類",
+        "順序回帰"
+      ]
+    },
+    {
+      "id": "tag_dl_act_sigmoid",
+      "label": "活性化関数（シグモイド・tanh）",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "順伝播型ネットワーク",
+        "活性化関数"
+      ],
+      "keywords": [
+        "温度パラメータ",
+        "勾配消失",
+        "双曲線関数"
+      ]
+    },
+    {
+      "id": "tag_dl_act_relu",
+      "label": "活性化関数（ReLU・Leaky ReLU）",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "順伝播型ネットワーク",
+        "活性化関数"
+      ],
+      "keywords": [
+        "GELU"
+      ]
+    },
+    {
+      "id": "tag_dl_sgd",
+      "label": "確率的勾配降下法（SGD）",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "深層モデルのための最適化",
+        "基本的なアルゴリズム"
+      ],
+      "keywords": [
+        "学習率",
+        "最急降下法",
+        "ミニバッチ"
+      ]
+    },
+    {
+      "id": "tag_dl_momentum",
+      "label": "モメンタム",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "深層モデルのための最適化",
+        "基本的なアルゴリズム"
+      ],
+      "keywords": [
+        "Pathological Curvature",
+        "Momentum",
+        "Nesterov Accelerated Gradient"
+      ]
+    },
+    {
+      "id": "tag_dl_backprop",
+      "label": "誤差逆伝播法",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "深層モデルのための最適化",
+        "誤差逆伝播法"
+      ],
+      "keywords": [
+        "連鎖律",
+        "偏微分によるデルタ",
+        "勾配消失"
+      ]
+    },
+    {
+      "id": "tag_dl_autodiff",
+      "label": "自動微分",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "深層モデルのための最適化",
+        "誤差逆伝播法"
+      ],
+      "keywords": [
+        "計算グラフ"
+      ]
+    },
+    {
+      "id": "tag_dl_adaptive_lr",
+      "label": "適応的学習率アルゴリズム",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "深層モデルのための最適化",
+        "適応的な学習率を持つアルゴリズム"
+      ],
+      "keywords": [
+        "AdaGrad",
+        "RMSProp",
+        "Adam"
+      ]
+    },
+    {
+      "id": "tag_dl_init",
+      "label": "パラメータの初期化戦略",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "深層モデルのための最適化",
+        "パラメータの初期化戦略"
+      ],
+      "keywords": [
+        "Xavier法／Glorot法",
+        "Kaiming法／He法"
+      ]
+    },
+    {
+      "id": "tag_dl_reg_norm",
+      "label": "パラメータノルムペナルティー",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "深層モデルのための正則化",
+        "パラメータノルムペナルティー"
+      ],
+      "keywords": [
+        "L1正則化",
+        "スパース表現",
+        "L2正則化",
+        "weight decay"
+      ]
+    },
+    {
+      "id": "tag_dl_dropout",
+      "label": "確率的削除（Dropout）",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "深層モデルのための正則化",
+        "確率的削除"
+      ],
+      "keywords": [
+        "ドロップアウト",
+        "ドロップコネクト"
+      ]
+    },
+    {
+      "id": "tag_dl_implicit_reg",
+      "label": "陰的正則化",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "深層モデルのための正則化",
+        "陰的正則化"
+      ],
+      "keywords": [
+        "早期終了",
+        "バッチサイズ",
+        "学習率の調整"
+      ]
+    },
+    {
+      "id": "tag_dl_conv_basic",
+      "label": "基本的な畳み込み演算",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "畳み込みニューラルネットワーク",
+        "畳み込みニューラルネットワーク"
+      ],
+      "keywords": [
+        "受容野",
+        "特徴マップ",
+        "フィルタ",
+        "カーネル",
+        "パディング",
+        "ストライド",
+        "im2col",
+        "チャネル"
+      ]
+    },
+    {
+      "id": "tag_dl_conv_special",
+      "label": "特別な畳み込み",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "畳み込みニューラルネットワーク",
+        "畳み込みニューラルネットワーク"
+      ],
+      "keywords": [
+        "point-wise畳み込み",
+        "depth-wise畳み込み",
+        "グループ化畳み込み",
+        "アップサンプリングと逆畳み込み"
+      ]
+    },
+    {
+      "id": "tag_dl_pooling",
+      "label": "プーリング",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "畳み込みニューラルネットワーク",
+        "畳み込みニューラルネットワーク"
+      ],
+      "keywords": [
+        "Max pooling",
+        "Lp pooling",
+        "Global Average Pooling"
+      ]
+    },
+    {
+      "id": "tag_dl_rnn",
+      "label": "リカレントニューラルネットワーク",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "リカレントニューラルネットワーク",
+        "リカレントニューラルネットワーク"
+      ],
+      "keywords": [
+        "順伝播の計算",
+        "BPTT",
+        "双方向RNN"
+      ]
+    },
+    {
+      "id": "tag_dl_lstm",
+      "label": "ゲート機構（LSTM・GRU）",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "リカレントニューラルネットワーク",
+        "ゲート機構"
+      ],
+      "keywords": [
+        "忘却ゲート",
+        "入力ゲート",
+        "出力ゲート",
+        "LSTM",
+        "GRU",
+        "リセットゲート",
+        "メモリーセル"
+      ]
+    },
+    {
+      "id": "tag_dl_seq2seq",
+      "label": "系列変換",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "リカレントニューラルネットワーク",
+        "系列変換"
+      ],
+      "keywords": [
+        "エンコーダ・デコーダ",
+        "seq2seq",
+        "アテンション（注意）機構"
+      ]
+    },
+    {
+      "id": "tag_dl_transformer",
+      "label": "Transformer",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "Transformer",
+        "Transformer"
+      ],
+      "keywords": [
+        "Self-Attention",
+        "Scaled Dot-Product Attention",
+        "Masked Attention",
+        "Multi-Head Attention",
+        "Positional Encoding"
+      ]
+    },
+    {
+      "id": "tag_dl_aug_image",
+      "label": "画像のデータ拡張",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "汎化性能向上のためのテクニック",
+        "データ集合の拡張"
+      ],
+      "keywords": [
+        "ノイズ付与",
+        "Random Flip・Erase・Crop",
+        "RandAugment",
+        "MixUp"
+      ]
+    },
+    {
+      "id": "tag_dl_aug_nlp",
+      "label": "自然言語のデータ拡張",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "汎化性能向上のためのテクニック",
+        "データ集合の拡張"
+      ],
+      "keywords": [
+        "EDA",
+        "MixUp"
+      ]
+    },
+    {
+      "id": "tag_dl_aug_audio",
+      "label": "音声のデータ拡張",
+      "eligible": false,
+      "ancestors": [
+        "深層学習の基礎",
+        "汎化性能向上のためのテクニック",
+        "データ集合の拡張"
+      ],
+      "keywords": [
+        "SpecAugment",
+        "ピッチシフト"
+      ]
+    },
+    {
+      "id": "tag_dl_normalization",
+      "label": "正規化（BatchNorm等）",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "汎化性能向上のためのテクニック",
+        "正規化"
+      ],
+      "keywords": [
+        "Batch Normalization",
+        "Layer Normalization",
+        "Instance Normalization",
+        "Group Normalization"
+      ]
+    },
+    {
+      "id": "tag_dl_ensemble",
+      "label": "アンサンブル手法",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "汎化性能向上のためのテクニック",
+        "アンサンブル手法"
+      ],
+      "keywords": [
+        "バギング",
+        "ブースティング",
+        "ブートストラップ",
+        "スタッキング"
+      ]
+    },
+    {
+      "id": "tag_dl_hyperparam",
+      "label": "ハイパーパラメータの選択",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "汎化性能向上のためのテクニック",
+        "ハイパーパラメータの選択"
+      ],
+      "keywords": [
+        "学習率",
+        "隠れ層の数",
+        "ユニット数",
+        "ドロップアウトの割合",
+        "バッチサイズ"
+      ]
+    },
+    {
+      "id": "tag_dl_hyperparam_opt",
+      "label": "ハイパーパラメータの最適化",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の基礎",
+        "汎化性能向上のためのテクニック",
+        "ハイパーパラメータの選択"
+      ],
+      "keywords": [
+        "グリッドサーチ",
+        "ランダムサーチ",
+        "ベイズ最適化"
+      ]
+    },
+    {
+      "id": "tag_app_resnet",
+      "label": "ResNet・WideResNet",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "画像認識",
+        "ResNet・WideResNet"
+      ],
+      "keywords": [
+        "残差接続（skip-connection）",
+        "ボトルネック構造",
+        "Residual Block"
+      ]
+    },
+    {
+      "id": "tag_app_vit",
+      "label": "Vision Transformer",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "画像認識",
+        "Vision Transformer"
+      ],
+      "keywords": [
+        "Shifted window",
+        "CLS token",
+        "Position embedding"
+      ]
+    },
+    {
+      "id": "tag_app_faster_rcnn",
+      "label": "Faster R-CNN・Mask R-CNN",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "物体検出",
+        "Faster R-CNN・Mask R-CNN"
+      ],
+      "keywords": [
+        "Region Proposal Network（RPN）",
+        "Anchor box",
+        "ROI Pooling",
+        "ROI Align",
+        "インスタンスセグメンテーション"
+      ]
+    },
+    {
+      "id": "tag_app_yolo",
+      "label": "YOLO・SSD",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "物体検出",
+        "YOLO・SSD"
+      ],
+      "keywords": [
+        "1ステージ検出",
+        "デフォルトボックス",
+        "Non-Maximum Suppression（NMS）",
+        "ハードネガティブマイニング"
+      ]
+    },
+    {
+      "id": "tag_app_fcos",
+      "label": "FCOS",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "物体検出",
+        "FCOS"
+      ],
+      "keywords": [
+        "アンカーフリー",
+        "Feature Pyramid Network（FPN）",
+        "センターネス",
+        "アンビギュアスサンプル"
+      ]
+    },
+    {
+      "id": "tag_app_segmentation",
+      "label": "FCN・U-Net",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "セマンティックセグメンテーション",
+        "FCN・U-Net"
+      ],
+      "keywords": [
+        "スキップコネクション",
+        "アップサンプリング",
+        "パノプティックセグメンテーション"
+      ]
+    },
+    {
+      "id": "tag_app_word_emb",
+      "label": "Word Embedding",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "自然言語処理",
+        "Word Embedding"
+      ],
+      "keywords": [
+        "Word2vec",
+        "n-gram",
+        "skip gram",
+        "CBOW",
+        "ネガティブサンプリング"
+      ]
+    },
+    {
+      "id": "tag_app_bert",
+      "label": "BERT",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "自然言語処理",
+        "大規模言語モデル（LLM）"
+      ],
+      "keywords": [
+        "Masked Language Modeling（MLM）",
+        "Next Sentence Prediction（NSP）",
+        "事前学習",
+        "ファインチューニング"
+      ]
+    },
+    {
+      "id": "tag_app_gpt",
+      "label": "GPT-n",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "自然言語処理",
+        "大規模言語モデル（LLM）"
+      ],
+      "keywords": [
+        "基盤モデル",
+        "Next token prediction",
+        "Few Shot learning",
+        "Zero Shot learning",
+        "RAG"
+      ]
+    },
+    {
+      "id": "tag_app_audio_stft",
+      "label": "サンプリング・短時間フーリエ変換・メル尺度",
+      "eligible": false,
+      "ancestors": [
+        "深層学習の応用",
+        "音声処理",
+        "サンプリング・短時間フーリエ変換・メル尺度"
+      ],
+      "keywords": [
+        "短時間フーリエ変換",
+        "メルスペクトログラム",
+        "MFCC"
+      ]
+    },
+    {
+      "id": "tag_app_wavenet",
+      "label": "WaveNet",
+      "eligible": false,
+      "ancestors": [
+        "深層学習の応用",
+        "音声処理",
+        "WaveNet"
+      ],
+      "keywords": [
+        "Dilated Causal Convolution",
+        "GTU",
+        "音声合成"
+      ]
+    },
+    {
+      "id": "tag_app_ctc",
+      "label": "CTC",
+      "eligible": false,
+      "ancestors": [
+        "深層学習の応用",
+        "音声処理",
+        "CTC"
+      ],
+      "keywords": [
+        "ビームサーチ",
+        "前向き・後ろ向きアルゴリズム"
+      ]
+    },
+    {
+      "id": "tag_app_gen_model",
+      "label": "識別モデルと生成モデル",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "生成モデル",
+        "識別モデルと生成モデル"
+      ],
+      "keywords": [
+        "自己回帰",
+        "生成モデル",
+        "拡散モデル",
+        "フローベース生成モデル"
+      ]
+    },
+    {
+      "id": "tag_app_ae",
+      "label": "オートエンコーダ",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "生成モデル",
+        "オートエンコーダ"
+      ],
+      "keywords": [
+        "Denoising autoencoder"
+      ]
+    },
+    {
+      "id": "tag_app_vae",
+      "label": "VAE",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "生成モデル",
+        "VAE"
+      ],
+      "keywords": [
+        "Reparameterization Trick",
+        "変分下限"
+      ]
+    },
+    {
+      "id": "tag_app_gan",
+      "label": "基本的なGAN",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "生成モデル",
+        "GAN"
+      ],
+      "keywords": [
+        "生成器ネットワーク",
+        "識別器ネットワーク",
+        "モード崩壊",
+        "Wasserstein GAN",
+        "DCGAN"
+      ]
+    },
+    {
+      "id": "tag_app_cgan",
+      "label": "条件付きGAN",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "生成モデル",
+        "GAN"
+      ],
+      "keywords": [
+        "Conditional GAN",
+        "CycleGAN"
+      ]
+    },
+    {
+      "id": "tag_app_dqn",
+      "label": "DQN",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "深層強化学習",
+        "深層強化学習のモデル"
+      ],
+      "keywords": [
+        "行動価値関数",
+        "TD学習",
+        "Q学習",
+        "Experience replay"
+      ]
+    },
+    {
+      "id": "tag_app_a3c",
+      "label": "A3C",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "深層強化学習",
+        "深層強化学習のモデル"
+      ],
+      "keywords": [
+        "方策勾配法（Policy Gradient）",
+        "Actor-Critic法"
+      ]
+    },
+    {
+      "id": "tag_app_transfer",
+      "label": "転移学習",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "様々な学習方法",
+        "転移学習"
+      ],
+      "keywords": [
+        "ファインチューニング",
+        "ドメイン適応",
+        "ドメインシフト"
+      ]
+    },
+    {
+      "id": "tag_app_ssl",
+      "label": "半教師あり学習と自己教師あり学習",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "様々な学習方法",
+        "半教師あり学習と自己教師あり学習"
+      ],
+      "keywords": [
+        "Self-Training",
+        "Co-Training",
+        "Contrastive learning"
+      ]
+    },
+    {
+      "id": "tag_app_active",
+      "label": "能動学習（Active Learning）",
+      "eligible": false,
+      "ancestors": [
+        "深層学習の応用",
+        "様々な学習方法",
+        "能動学習（Active Learning）"
+      ],
+      "keywords": [
+        "Uncertainty Sampling",
+        "Least Confident",
+        "Representative Sampling"
+      ]
+    },
+    {
+      "id": "tag_app_metric_2",
+      "label": "距離学習（2サンプルによる比較）",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "様々な学習方法",
+        "距離学習（Metric Learning）"
+      ],
+      "keywords": [
+        "表現学習",
+        "Siamese network",
+        "contrastive loss"
+      ]
+    },
+    {
+      "id": "tag_app_metric_3",
+      "label": "距離学習（3サンプルによる比較）",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "様々な学習方法",
+        "距離学習（Metric Learning）"
+      ],
+      "keywords": [
+        "Triplet loss",
+        "Triplet network"
+      ]
+    },
+    {
+      "id": "tag_app_meta",
+      "label": "メタ学習（Meta Learning）",
+      "eligible": false,
+      "ancestors": [
+        "深層学習の応用",
+        "様々な学習方法",
+        "メタ学習（Meta Learning）"
+      ],
+      "keywords": [
+        "MAML",
+        "Model-Agnostic",
+        "メタ目的関数"
+      ]
+    },
+    {
+      "id": "tag_app_xai_vis",
+      "label": "判断根拠の可視化",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "深層学習の説明性",
+        "判断根拠の可視化"
+      ],
+      "keywords": [
+        "XAI",
+        "Grad-CAM",
+        "Integrated Gradients"
+      ]
+    },
+    {
+      "id": "tag_app_xai_approx",
+      "label": "モデルの近似",
+      "eligible": true,
+      "ancestors": [
+        "深層学習の応用",
+        "深層学習の説明性",
+        "モデルの近似"
+      ],
+      "keywords": [
+        "局所的な解釈",
+        "大域的な解釈",
+        "LIME",
+        "SHAP",
+        "Shapley Value"
+      ]
+    },
+    {
+      "id": "tag_ops_lightweight",
+      "label": "モデルの軽量化",
+      "eligible": true,
+      "ancestors": [
+        "開発・運用環境",
+        "エッジコンピューティング",
+        "モデルの軽量化"
+      ],
+      "keywords": [
+        "プルーニング",
+        "蒸留（Distillation）",
+        "量子化（Quantization）"
+      ]
+    },
+    {
+      "id": "tag_ops_distributed",
+      "label": "並列分散処理",
+      "eligible": true,
+      "ancestors": [
+        "開発・運用環境",
+        "分散処理",
+        "並列分散処理"
+      ],
+      "keywords": [
+        "分散深層学習",
+        "モデル並列化",
+        "データ並列化"
+      ]
+    },
+    {
+      "id": "tag_ops_federated",
+      "label": "連合学習（Federated learning）",
+      "eligible": false,
+      "ancestors": [
+        "開発・運用環境",
+        "分散処理",
+        "連合学習（Federated learning）"
+      ],
+      "keywords": [
+        "Federated Averaging",
+        "クロスデバイス学習",
+        "クロスサイロ学習"
+      ]
+    },
+    {
+      "id": "tag_ops_accelerator",
+      "label": "デバイスによる高速化",
+      "eligible": true,
+      "ancestors": [
+        "開発・運用環境",
+        "アクセラレータ",
+        "デバイスによる高速化"
+      ],
+      "keywords": [
+        "SIMD",
+        "SIMT",
+        "GPU",
+        "TPU"
+      ]
+    },
+    {
+      "id": "tag_ops_container",
+      "label": "コンテナ型仮想化",
+      "eligible": true,
+      "ancestors": [
+        "開発・運用環境",
+        "環境構築",
+        "コンテナ型仮想化"
+      ],
+      "keywords": [
+        "Docker",
+        "Dockerfile",
+        "ハイパーバイザー型",
+        "コンテナ型"
+      ]
+    }
+  ]
+}
