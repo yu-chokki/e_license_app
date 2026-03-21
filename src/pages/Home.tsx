@@ -45,9 +45,9 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white flex flex-col">
+    <div className="min-h-screen bg-white flex flex-col">
       <header className="pt-12 pb-6 px-4 text-center">
-        <h1 className="text-3xl font-bold text-indigo-700">E資格学習</h1>
+        <h1 className="text-3xl font-bold">E資格学習</h1>
         <p className="text-gray-500 text-sm mt-1">JDLA E資格 シラバス対応</p>
       </header>
 
@@ -97,7 +97,7 @@ export default function Home() {
             )}
 
             <div className="bg-white rounded-2xl shadow-md p-6 space-y-3">
-              <h2 className="text-lg font-semibold text-gray-800">学習を始める</h2>
+              <h2 className="text-lg font-semibold">学習を始める</h2>
 
               <button
                 onClick={() => setShowTagSelector(true)}
@@ -128,7 +128,7 @@ export default function Home() {
         ) : (
           <div className="bg-white rounded-2xl shadow-md p-6 space-y-4">
             <div className="flex items-center justify-between">
-              <h2 className="text-lg font-semibold text-gray-800">分野を選択</h2>
+              <h2 className="text-lg font-semibold">分野を選択</h2>
               <button
                 onClick={() => setShowTagSelector(false)}
                 className="text-gray-400 hover:text-gray-600 text-xl"

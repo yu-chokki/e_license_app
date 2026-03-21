@@ -81,7 +81,7 @@ export default function Dashboard() {
         <button onClick={() => navigate('/')} className="text-gray-400 hover:text-gray-600">
           ←
         </button>
-        <h1 className="text-lg font-bold text-gray-800 flex-1">ダッシュボード</h1>
+        <h1 className="text-lg font-bold flex-1">ダッシュボード</h1>
         <button
           onClick={() => {
             if (confirm('進捗をリセットしますか？')) resetProgress();

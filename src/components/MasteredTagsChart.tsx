@@ -132,7 +132,7 @@ export default function MasteredTagsChart({ days = 30 }: Props) {
 
   return (
     <div className="bg-white rounded-xl shadow p-4 mb-6">
-      <h2 className="text-lg font-bold mb-3 text-gray-800">習得タグ推移（直近{days}日）</h2>
+      <h2 className="text-lg font-bold mb-3">習得タグ推移（直近{days}日）</h2>
 
       {/* サマリーカード */}
       <div className="grid grid-cols-3 gap-3 mb-4">
