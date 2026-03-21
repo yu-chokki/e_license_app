@@ -5,6 +5,7 @@ import tagsData from '../data/tags.json';
 import type { Question, Tag, SessionResult } from '../types';
 import QuestionCard from '../components/QuestionCard';
 import { useProgress } from '../hooks/useProgress';
+import NeuroPassLogo from '../components/NeuroPassLogo';
 
 const allQuestions: Question[] = (questionsData as { questions: Question[] }).questions;
 const allTags: Tag[] = (tagsData as { tags: Tag[] }).tags;
@@ -93,11 +94,14 @@ export default function Quiz() {
           </svg>
         </button>
         <div className="flex-1">
-          <div className="flex justify-between text-xs text-gray-500 mb-1">
+          <NeuroPassLogo variant="mini" />
+        </div>
+        <div className="text-right">
+          <div className="flex justify-end gap-3 text-xs text-gray-500 mb-1">
             <span>問題 {currentIndex + 1} / {questions.length}問</span>
             <span>{sessionResults.filter((r) => r.correct).length} 正解</span>
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-1.5">
+          <div className="w-28 bg-gray-200 rounded-full h-1.5 ml-auto">
             <div
               className="bg-indigo-500 h-1.5 rounded-full transition-all"
               style={{ width: `${((currentIndex + (selectedId ? 1 : 0)) / questions.length) * 100}%` }}

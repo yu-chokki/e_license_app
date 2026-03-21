@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import tagsData from '../data/tags.json';
 import type { Tag, Progress } from '../types';
 import TagSelector from '../components/TagSelector';
+import NeuroPassLogo from '../components/NeuroPassLogo';
 
 const allTags: Tag[] = (tagsData as { tags: Tag[] }).tags;
 const eligibleTags = allTags.filter((t) => t.eligible);
@@ -46,9 +47,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
-      <header className="pt-12 pb-6 px-4 text-center">
-        <h1 className="text-3xl font-bold">E資格学習</h1>
-        <p className="text-gray-500 text-sm mt-1">JDLA E資格 シラバス対応</p>
+      <header className="pt-10 pb-6 px-4 flex flex-col items-center gap-1">
+        <NeuroPassLogo variant="mini" />
+        <p className="text-gray-400 text-xs tracking-widest">E資格 Deep Learning 学習アプリ</p>
       </header>
 
       <main className="flex-1 px-4 max-w-lg mx-auto w-full space-y-4 pb-8">

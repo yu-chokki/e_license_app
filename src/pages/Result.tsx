@@ -3,6 +3,7 @@ import type { SessionResult } from '../types';
 import tagsData from '../data/tags.json';
 import type { Tag } from '../types';
 import ProgressBar from '../components/ProgressBar';
+import NeuroPassLogo from '../components/NeuroPassLogo';
 
 const allTags: Tag[] = (tagsData as { tags: Tag[] }).tags;
 
@@ -44,8 +45,14 @@ export default function Result() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
-      <header className="bg-white border-b px-4 py-3 text-center">
-        <h1 className="text-lg font-bold">セッション結果</h1>
+      <header className="bg-white border-b px-4 py-3 flex items-center justify-between">
+        <button onClick={() => navigate('/')} className="text-gray-500 hover:text-gray-800 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+          </svg>
+        </button>
+        <NeuroPassLogo variant="mini" />
+        <h1 className="text-sm font-semibold text-gray-500">セッション結果</h1>
       </header>
 
       <main className="flex-1 p-4 max-w-lg mx-auto w-full space-y-4">

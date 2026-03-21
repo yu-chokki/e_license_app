@@ -5,6 +5,7 @@ import type { Tag } from '../types';
 import { useProgress } from '../hooks/useProgress';
 import ProgressBar from '../components/ProgressBar';
 import MasteredTagsChart from '../components/MasteredTagsChart';
+import NeuroPassLogo from '../components/NeuroPassLogo';
 
 const allTags: Tag[] = (tagsData as { tags: Tag[] }).tags;
 const eligibleTags = allTags.filter((t) => t.eligible);
@@ -84,7 +85,9 @@ export default function Dashboard() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
           </svg>
         </button>
-        <h1 className="text-lg font-bold flex-1">ダッシュボード</h1>
+        <div className="flex-1">
+          <NeuroPassLogo variant="mini" />
+        </div>
         <button
           onClick={() => {
             if (confirm('進捗をリセットしますか？')) resetProgress();
