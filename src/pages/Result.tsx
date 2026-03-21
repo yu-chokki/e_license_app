@@ -45,7 +45,7 @@ export default function Result() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <header className="bg-white border-b px-4 py-3 text-center">
-        <h1 className="text-lg font-bold text-gray-800">セッション結果</h1>
+        <h1 className="text-lg font-bold">セッション結果</h1>
       </header>
 
       <main className="flex-1 p-4 max-w-lg mx-auto w-full space-y-4">
@@ -60,7 +60,7 @@ export default function Result() {
         {/* タグ別結果 */}
         {tagSummaries.length > 0 && (
           <div className="bg-white rounded-2xl shadow-md p-6 space-y-3">
-            <h2 className="text-sm font-semibold text-gray-700">分野別結果</h2>
+            <h2 className="text-sm font-semibold">分野別結果</h2>
             {tagSummaries.map((s) => (
               <div key={s.tagId} className="space-y-1">
                 <div className="text-xs text-gray-600">{s.label}</div>

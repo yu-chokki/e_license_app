@@ -4,6 +4,7 @@ import tagsData from '../data/tags.json';
 import type { Tag } from '../types';
 import { useProgress } from '../hooks/useProgress';
 import ProgressBar from '../components/ProgressBar';
+import MasteredTagsChart from '../components/MasteredTagsChart';
 
 const allTags: Tag[] = (tagsData as { tags: Tag[] }).tags;
 const eligibleTags = allTags.filter((t) => t.eligible);
@@ -80,7 +81,7 @@ export default function Dashboard() {
         <button onClick={() => navigate('/')} className="text-gray-400 hover:text-gray-600">
           ←
         </button>
-        <h1 className="text-lg font-bold text-gray-800 flex-1">ダッシュボード</h1>
+        <h1 className="text-lg font-bold flex-1">ダッシュボード</h1>
         <button
           onClick={() => {
             if (confirm('進捗をリセットしますか？')) resetProgress();
@@ -92,6 +93,7 @@ export default function Dashboard() {
       </header>
 
       <main className="flex-1 p-4 max-w-lg mx-auto w-full space-y-4 pb-8">
+        <MasteredTagsChart days={30} />
         {/* サマリー */}
         <div className="bg-white rounded-2xl shadow-md p-5 flex gap-4">
           <div className="flex-1 text-center">
