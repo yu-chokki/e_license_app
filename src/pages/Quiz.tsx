@@ -70,13 +70,13 @@ export default function Quiz() {
     localStorage.setItem(LAST_TAG_KEY, current.tagId);
     setSessionResults((prev) => [
       ...prev,
-      { questionId: current.id, tagId: current.tagId, correct },
+      { questionId: current.id, tagId: current.tagId, correct, chosenId: choiceId },
     ]);
   };
 
   const handleNext = () => {
     if (currentIndex + 1 >= questions.length) {
-      navigate('/result', { state: { sessionResults } });
+      navigate('/result', { state: { sessionResults, questions } });
     } else {
       setCurrentIndex((i) => i + 1);
       setSelectedId(null);

@@ -38,4 +38,5 @@ export type SessionResult = {
   questionId: string;
   tagId: string;
   correct: boolean;
+  chosenId: string;
 };
