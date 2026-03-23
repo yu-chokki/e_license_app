@@ -4,6 +4,7 @@ import type { Progress, QuestionProgress, TagProgress } from '../types';
 const PROGRESS_KEY = 'eqa_progress';
 const QUESTION_PROGRESS_KEY = 'eqa_question_progress';
 const DAILY_SNAPSHOT_KEY = 'eqa_daily_snapshot';
+const DAILY_ACTIVITY_KEY = 'eqa_daily_activity';
 
 function loadProgress(): Progress {
   try {
@@ -41,6 +42,18 @@ function saveDailySnapshot(progress: Progress): void {
   }
 }
 
+function incrementDailyActivity(): void {
+  const today = new Date().toISOString().split('T')[0];
+  try {
+    const raw = localStorage.getItem(DAILY_ACTIVITY_KEY);
+    const activity: Record<string, number> = raw ? JSON.parse(raw) : {};
+    activity[today] = (activity[today] ?? 0) + 1;
+    localStorage.setItem(DAILY_ACTIVITY_KEY, JSON.stringify(activity));
+  } catch {
+    // localStorageへの書き込み失敗は無視
+  }
+}
+
 export function useProgress() {
   const [progress, setProgress] = useState<Progress>(loadProgress);
   const [questionProgress, setQuestionProgress] = useState<QuestionProgress>(loadQuestionProgress);
@@ -58,6 +71,7 @@ export function useProgress() {
         };
         localStorage.setItem(PROGRESS_KEY, JSON.stringify(next));
         saveDailySnapshot(next);
+        incrementDailyActivity();
         return next;
       });
 
@@ -81,6 +95,7 @@ export function useProgress() {
     localStorage.removeItem(PROGRESS_KEY);
     localStorage.removeItem(QUESTION_PROGRESS_KEY);
     localStorage.removeItem(DAILY_SNAPSHOT_KEY);
+    localStorage.removeItem(DAILY_ACTIVITY_KEY);
     setProgress({});
     setQuestionProgress({});
   }, []);

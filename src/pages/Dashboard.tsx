@@ -5,6 +5,7 @@ import type { Tag } from '../types';
 import { useProgress } from '../hooks/useProgress';
 import ProgressBar from '../components/ProgressBar';
 import MasteredTagsChart from '../components/MasteredTagsChart';
+import DailyActivityChart from '../components/DailyActivityChart';
 import NeuroPassLogo from '../components/NeuroPassLogo';
 
 const allTags: Tag[] = (tagsData as { tags: Tag[] }).tags;
@@ -99,6 +100,7 @@ export default function Dashboard() {
       </header>
 
       <main className="flex-1 p-4 max-w-lg mx-auto w-full space-y-4 pb-8">
+        <DailyActivityChart days={30} />
         <MasteredTagsChart days={30} />
         {/* サマリー */}
         <div className="bg-white rounded-2xl shadow-md p-5 flex gap-4">
