@@ -76,6 +76,34 @@ export default function QuestionCard({ question, tagLabel, selectedId, onSelect 
       </div>
 
       {answered && (
+        <div
+          className={`flex items-center gap-3 p-4 rounded-xl border ${
+            selectedId === question.answerId
+              ? 'bg-green-50 border-green-300'
+              : 'bg-red-50 border-red-300'
+          }`}
+        >
+          <span className="text-3xl flex-shrink-0">
+            {selectedId === question.answerId ? '✅' : '❌'}
+          </span>
+          <div>
+            <p
+              className={`text-base font-bold ${
+                selectedId === question.answerId ? 'text-green-700' : 'text-red-600'
+              }`}
+            >
+              {selectedId === question.answerId ? '正解！' : '残念...'}
+            </p>
+            {selectedId !== question.answerId && (
+              <p className="text-sm text-green-700 mt-0.5">
+                正解：{shuffledChoices.find((c) => c.id === question.answerId)?.text}
+              </p>
+            )}
+          </div>
+        </div>
+      )}
+
+      {answered && (
         <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4 text-sm text-indigo-900 leading-relaxed">
           <span className="font-semibold">解説：</span>
           {question.explanation}
