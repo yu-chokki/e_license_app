@@ -21,13 +21,19 @@ export default defineConfig({
         start_url: '/e_license_app/',
         icons: [
           {
-            src: '/icon-192.png',
+            src: 'pwa-192x192.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/icon-512.png',
+            src: 'pwa-512x512.png',
             sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any maskable',
+          },
+          {
+            src: 'apple-touch-icon.png',
+            sizes: '180x180',
             type: 'image/png',
           },
         ],
