@@ -27,7 +27,7 @@ export default function Quiz() {
   const navigate = useNavigate();
   const { recordAnswer } = useProgress();
 
-  const { tagIds = [] } = (location.state as { tagIds: string[]; mode: string }) ?? {};
+  const { tagIds = [], questionCount } = (location.state as { tagIds: string[]; mode: string; questionCount?: number | null }) ?? {};
 
   const queueRef = useRef<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,7 +36,8 @@ export default function Quiz() {
 
   useEffect(() => {
     const filtered = allQuestions.filter((q) => tagIds.includes(q.tagId));
-    queueRef.current = shuffle(filtered);
+    const limit = questionCount ? Math.min(questionCount, filtered.length) : filtered.length;
+    queueRef.current = shuffle(filtered).slice(0, limit);
     setCurrentIndex(0);
     setSelectedId(null);
     setSessionResults([]);

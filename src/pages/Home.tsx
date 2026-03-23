@@ -21,12 +21,15 @@ function loadProgress(): Progress {
   }
 }
 
+const COUNT_PRESETS = [10, 20, 50] as const;
+
 export default function Home() {
   const navigate = useNavigate();
   const [showTagSelector, setShowTagSelector] = useState(false);
   const [selectedTags, setSelectedTags] = useState<Set<string>>(
     new Set(eligibleTags.map((t) => t.id))
   );
+  const [questionCount, setQuestionCount] = useState<number | null>(null); // null = 全問
 
   const progress = useMemo(() => loadProgress(), []);
   const lastTagId = localStorage.getItem(LAST_TAG_KEY);
@@ -38,11 +41,11 @@ export default function Home() {
 
   const startTagMode = () => {
     if (selectedTags.size === 0) return;
-    navigate('/quiz', { state: { tagIds: Array.from(selectedTags), mode: 'tag' } });
+    navigate('/quiz', { state: { tagIds: Array.from(selectedTags), mode: 'tag', questionCount } });
   };
 
   const startRandomMode = () => {
-    navigate('/quiz', { state: { tagIds: eligibleTags.map((t) => t.id), mode: 'random' } });
+    navigate('/quiz', { state: { tagIds: eligibleTags.map((t) => t.id), mode: 'random', questionCount } });
   };
 
   return (
@@ -100,6 +103,36 @@ export default function Home() {
             <div className="bg-white rounded-2xl shadow-md p-6 space-y-3">
               <h2 className="text-lg font-semibold">学習を始める</h2>
 
+              {/* 出題数設定 */}
+              <div>
+                <p className="text-xs text-gray-500 mb-1.5">出題数</p>
+                <div className="flex gap-1.5">
+                  {COUNT_PRESETS.map((n) => (
+                    <button
+                      key={n}
+                      onClick={() => setQuestionCount(questionCount === n ? null : n)}
+                      className={`flex-1 py-2 rounded-lg text-sm font-medium border transition-colors ${
+                        questionCount === n
+                          ? 'bg-indigo-600 text-white border-indigo-600'
+                          : 'bg-white text-gray-600 border-gray-200 hover:border-indigo-300'
+                      }`}
+                    >
+                      {n}問
+                    </button>
+                  ))}
+                  <button
+                    onClick={() => setQuestionCount(null)}
+                    className={`flex-1 py-2 rounded-lg text-sm font-medium border transition-colors ${
+                      questionCount === null
+                        ? 'bg-indigo-600 text-white border-indigo-600'
+                        : 'bg-white text-gray-600 border-gray-200 hover:border-indigo-300'
+                    }`}
+                  >
+                    全問
+                  </button>
+                </div>
+              </div>
+
               <button
                 onClick={() => setShowTagSelector(true)}
                 className="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-semibold text-base transition-colors"
@@ -144,12 +177,42 @@ export default function Home() {
               onChange={setSelectedTags}
             />
 
+            {/* 出題数設定（タグ選択画面内） */}
+            <div>
+              <p className="text-xs text-gray-500 mb-1.5">出題数</p>
+              <div className="flex gap-1.5">
+                {COUNT_PRESETS.map((n) => (
+                  <button
+                    key={n}
+                    onClick={() => setQuestionCount(questionCount === n ? null : n)}
+                    className={`flex-1 py-2 rounded-lg text-sm font-medium border transition-colors ${
+                      questionCount === n
+                        ? 'bg-indigo-600 text-white border-indigo-600'
+                        : 'bg-white text-gray-600 border-gray-200 hover:border-indigo-300'
+                    }`}
+                  >
+                    {n}問
+                  </button>
+                ))}
+                <button
+                  onClick={() => setQuestionCount(null)}
+                  className={`flex-1 py-2 rounded-lg text-sm font-medium border transition-colors ${
+                    questionCount === null
+                      ? 'bg-indigo-600 text-white border-indigo-600'
+                      : 'bg-white text-gray-600 border-gray-200 hover:border-indigo-300'
+                  }`}
+                >
+                  全問
+                </button>
+              </div>
+            </div>
+
             <button
               onClick={startTagMode}
               disabled={selectedTags.size === 0}
               className="w-full py-4 bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-300 text-white rounded-xl font-semibold text-base transition-colors"
             >
-              出題開始（{selectedTags.size} 分野）
+              出題開始（{selectedTags.size} 分野 / {questionCount ?? '全'}問）
             </button>
           </div>
         )}
